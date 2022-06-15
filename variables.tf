@@ -3,6 +3,12 @@ variable "name" {
   type        = string
 }
 
+variable "description" {
+  description = "Description of the secret manager"
+  type        = string
+  default     = ""
+}
+
 variable "secrets" {
   description = "Map of secrets"
   type        = map(any)
