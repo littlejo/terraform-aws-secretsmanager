@@ -21,7 +21,7 @@ variable "secrets" {
 }
 
 variable "tags" {
-  description = "List of tags"
-  type        = list(any)
-  default     = []
+  description = "Map of tags"
+  type        = map(string)
+  default     = {}
 }
