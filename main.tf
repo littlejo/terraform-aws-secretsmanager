@@ -1,7 +1,8 @@
 resource "aws_secretsmanager_secret" "this" {
-  name        = var.name
-  description = var.description
-  tags        = var.tags
+  name                    = var.name
+  description             = var.description
+  recovery_window_in_days = var.recovery_window_in_days
+  tags                    = var.tags
 }
 
 resource "aws_secretsmanager_secret_version" "this" {

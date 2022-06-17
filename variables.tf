@@ -9,6 +9,12 @@ variable "description" {
   default     = ""
 }
 
+variable "recovery_window_in_days" {
+  description = "Number of days that AWS Secrets Manager waits before it can delete the secret"
+  type        = number
+  default     = 0
+}
+
 variable "secrets" {
   description = "Map of secrets"
   type        = map(any)
