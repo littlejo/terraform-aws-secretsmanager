@@ -20,6 +20,12 @@ variable "secrets" {
   type        = map(any)
 }
 
+variable "kms_key_id" {
+  description = "KMS key Id"
+  type        = string
+  default     = null
+}
+
 variable "tags" {
   description = "Map of tags"
   type        = map(string)
