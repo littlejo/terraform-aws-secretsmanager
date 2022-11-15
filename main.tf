@@ -7,6 +7,7 @@ resource "aws_secretsmanager_secret" "this" {
 }
 
 resource "aws_secretsmanager_secret_version" "this" {
+  count         = var.secrets == null ? 0 : 1
   secret_id     = aws_secretsmanager_secret.this.id
   secret_string = jsonencode(var.secrets)
 }

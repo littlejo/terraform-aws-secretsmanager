@@ -17,7 +17,8 @@ variable "recovery_window_in_days" {
 
 variable "secrets" {
   description = "Map of secrets"
-  type        = map(any)
+  type        = map(string)
+  default     = null
 }
 
 variable "kms_key_id" {
